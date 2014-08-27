@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Korann", "Korann\Korann.csproj", "{F0CC5301-6C47-45ED-81AF-0B8DAC4577D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Korann.DAL", "Korann.DAL\Korann.DAL.csproj", "{B97472AE-8906-4E3D-B54D-B7A8233D599C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Korann.Configuration", "Korann.Configuration\Korann.Configuration.csproj", "{93874161-AD76-4CB6-BDC2-46502340D29A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Korann.Tests", "Korann.Tests\Korann.Tests.csproj", "{13CC4D26-0FD4-4CF2-A4E1-1F8D3B58C2BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Korann.Infrastructure", "Korann.Infrastructure\Korann.Infrastructure.csproj", "{EB3EBD0D-F652-4585-BFC8-073DA550EC50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Korann.Utils", "Korann.Utils\Korann.Utils.csproj", "{D3879A69-9EE8-4BB1-A4CB-F306D12CCAD8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6B592921-116D-4592-BEE9-64E7A378B577}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Back-end", "Back-end", "{53DA589A-CB0A-4AE7-9CE9-EDD8246426F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B9D69192-5D8F-4ABE-BA55-7FFA4931169C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Front-end", "Front-end", "{59FEC0AC-FDDF-4302-A9F6-775E27BEF3D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{7D1F3503-5BCD-4311-8EC5-1FED6A8AAE36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{9B01C499-578F-40B8-9C72-37224F577990}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Korann.DAL.Configuration", "Korann.DAL.Configuration\Korann.DAL.Configuration.csproj", "{6D9B390B-314F-4674-92B5-19B6185C8FAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0CC5301-6C47-45ED-81AF-0B8DAC4577D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0CC5301-6C47-45ED-81AF-0B8DAC4577D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0CC5301-6C47-45ED-81AF-0B8DAC4577D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0CC5301-6C47-45ED-81AF-0B8DAC4577D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B97472AE-8906-4E3D-B54D-B7A8233D599C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B97472AE-8906-4E3D-B54D-B7A8233D599C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B97472AE-8906-4E3D-B54D-B7A8233D599C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B97472AE-8906-4E3D-B54D-B7A8233D599C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93874161-AD76-4CB6-BDC2-46502340D29A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93874161-AD76-4CB6-BDC2-46502340D29A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93874161-AD76-4CB6-BDC2-46502340D29A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93874161-AD76-4CB6-BDC2-46502340D29A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13CC4D26-0FD4-4CF2-A4E1-1F8D3B58C2BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13CC4D26-0FD4-4CF2-A4E1-1F8D3B58C2BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13CC4D26-0FD4-4CF2-A4E1-1F8D3B58C2BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13CC4D26-0FD4-4CF2-A4E1-1F8D3B58C2BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB3EBD0D-F652-4585-BFC8-073DA550EC50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB3EBD0D-F652-4585-BFC8-073DA550EC50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB3EBD0D-F652-4585-BFC8-073DA550EC50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB3EBD0D-F652-4585-BFC8-073DA550EC50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3879A69-9EE8-4BB1-A4CB-F306D12CCAD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3879A69-9EE8-4BB1-A4CB-F306D12CCAD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3879A69-9EE8-4BB1-A4CB-F306D12CCAD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3879A69-9EE8-4BB1-A4CB-F306D12CCAD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D9B390B-314F-4674-92B5-19B6185C8FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D9B390B-314F-4674-92B5-19B6185C8FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D9B390B-314F-4674-92B5-19B6185C8FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D9B390B-314F-4674-92B5-19B6185C8FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F0CC5301-6C47-45ED-81AF-0B8DAC4577D9} = {59FEC0AC-FDDF-4302-A9F6-775E27BEF3D4}
+		{B97472AE-8906-4E3D-B54D-B7A8233D599C} = {9B01C499-578F-40B8-9C72-37224F577990}
+		{6D9B390B-314F-4674-92B5-19B6185C8FAC} = {9B01C499-578F-40B8-9C72-37224F577990}
+		{EB3EBD0D-F652-4585-BFC8-073DA550EC50} = {7D1F3503-5BCD-4311-8EC5-1FED6A8AAE36}
+		{D3879A69-9EE8-4BB1-A4CB-F306D12CCAD8} = {7D1F3503-5BCD-4311-8EC5-1FED6A8AAE36}
+		{93874161-AD76-4CB6-BDC2-46502340D29A} = {7D1F3503-5BCD-4311-8EC5-1FED6A8AAE36}
+		{13CC4D26-0FD4-4CF2-A4E1-1F8D3B58C2BB} = {B9D69192-5D8F-4ABE-BA55-7FFA4931169C}
+	EndGlobalSection
+EndGlobal

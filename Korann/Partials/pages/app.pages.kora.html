@@ -1,0 +1,18 @@
+﻿<h1 class="page-header">Продукты</h1>
+<ul class="list-group kora">
+    <li class="panel panel-info product" ng-repeat="product in model.products">
+        <div ui-sref="product({ id: product.id })">
+            <div class="panel-heading">{{product.name}}</div>
+            <div class="panel-body">
+                <div class="panel-info">
+                    <p>Category: {{product.category}}</p>
+                    <p>Price: {{product.price}}</p>
+                    <p>Description: {{product.description}}</p>
+                </div>
+                <div class="panel-img">
+                    <img src="/Content/images/example.jpg" />
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

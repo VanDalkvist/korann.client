@@ -1,0 +1,7 @@
+﻿<div class="side-menu" ng-controller="categoriesCtrl">
+    <ul>
+        <li ng-class="isCurrent(category.name) ? 'active' : ''" ng-repeat="category in model.categories">
+            <a ui-sref="category({ 'category': category.name})"><span>{{category.name}}</span></a>
+        </li>
+    </ul>
+</div>

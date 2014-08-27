@@ -1,0 +1,23 @@
+﻿@using System.Web.Optimization;
+
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org">
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    @Styles.Render("~/bundles/styles")
+    @Styles.Render("~/bundles/bootstrap-styles")
+</head>
+<body >
+    <div data-ng-app="korann">
+        @RenderBody()
+        
+        @Scripts.Render("~/bundles/angular")
+        @Scripts.Render("~/bundles/angular-extensions")
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/optimization")
+        @Scripts.Render("~/bundles/app")
+    </div>
+</body>
+</html>

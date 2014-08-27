@@ -1,0 +1,35 @@
+﻿.cogs {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    z-index: -100;
+}
+
+@-webkit-keyframes rotateCog { 100% { -webkit-transform: rotate(360deg); } }
+@-moz-keyframes rotateCog { 100% { -moz-transform: rotate(360deg); } }
+@keyframes rotateCog { 100% { transform: rotate(360deg); } }
+
+.cogOne {
+    -moz-animation: rotateCog 30s infinite linear;
+    -ms-animation: rotateCog 30s infinite linear;
+    -o-animation: rotateCog 30s infinite linear;
+    -webkit-animation: rotateCog 30s infinite linear;
+    animation: rotateCog 30s infinite linear;
+    
+    text-align: center;
+}
+
+.construction header.header-menu {
+    text-align: center;
+}
+
+.construction div.middle {
+    position: absolute;
+    top: 30%;
+}
+
+    .construction div.middle div.main {
+        margin-left: 0;
+        margin-right: 0;
+    }

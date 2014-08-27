@@ -1,0 +1,260 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Open+Sans:600);
+
+/* Main Horizontal Menu */
+
+.main-menu,
+.main-menu > ul {
+    background: url(/Content/images/menu/hover.png) repeat;
+    padding-bottom: 3px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+}
+
+    .main-menu:before,
+    .main-menu:after,
+    .main-menu > ul:before,
+    .main-menu > ul:after {
+        content: '';
+        display: table;
+    }
+
+    .main-menu:after,
+    .main-menu > ul:after {
+        clear: both;
+    }
+
+.main-menu {
+    width: auto;
+    zoom: 1;
+    margin: auto;
+}
+
+    .main-menu .navbar-nav > li > a {
+        color: white !important;
+    }
+
+    .main-menu > ul {
+        background: url(/Content/images/menu/menu-bg.png) repeat;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+        .main-menu > ul li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .main-menu > ul > li {
+            float: left;
+            position: relative;
+        }
+
+            .main-menu > ul > li > a {
+                padding: 23px 26px;
+                display: block;
+                color: white;
+                font-size: 13px;
+                text-decoration: none;
+                text-transform: uppercase;
+                -ms-text-shadow: 0 -1px 0 #c28130;
+                text-shadow: 0 -1px 0 #c28130;
+                text-shadow: 0 -1px 0 rgba(151, 99, 33, 0.43);
+                line-height: 18px;
+            }
+
+            .main-menu > ul > li:hover > a {
+                background: url(/Content/images/menu/hover.png) repeat;
+            }
+
+            .main-menu > ul > li > a > span {
+                line-height: 18px;
+            }
+
+        .main-menu > ul.navbar-nav > li.active > a,
+        .main-menu > ul.navbar-nav > li > a:active {
+            background: url(/Content/images/menu/highlight-bg.png) repeat !important;
+        }
+
+        /* Childs */
+        .main-menu > ul ul {
+            -ms-opacity: 0;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 120px;
+            background: url(/Content/images/menu/hover.png) repeat;
+            margin: 0;
+            padding: 0;
+            z-index: -1;
+            -webkit-transition: all 0.35s 0.2s ease-in-out;
+            -moz-transition: all 0.35s 0.2s ease-in-out;
+            -ms-transition: all 0.35s 0.2s ease-in-out;
+            -o-transition: all 0.35s 0.2s ease-in-out;
+            transition: all 0.35s 0.2s ease-in-out;
+        }
+
+        .main-menu > ul li:hover ul {
+            -ms-opacity: 1;
+            opacity: 1;
+            visibility: visible;
+            margin: 0;
+            color: #000;
+            z-index: 2;
+            top: 64px;
+            left: 0;
+        }
+
+        .main-menu > ul ul:before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            width: 100%;
+            height: 20px;
+            background: transparent;
+        }
+
+        .main-menu > ul ul li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+            .main-menu > ul ul li a {
+                padding: 18px 26px;
+                display: block;
+                color: white;
+                font-size: 13px;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: 150px;
+                border-left: 4px solid transparent;
+                -webkit-transition: all 0.35s ease-in-out;
+                -moz-transition: all 0.35s ease-in-out;
+                -ms-transition: all 0.35s ease-in-out;
+                -o-transition: all 0.35s ease-in-out;
+                transition: all 0.35s ease-in-out;
+                -ms-text-shadow: 0 -1px 0 #c28130;
+                text-shadow: 0 -1px 0 #c28130;
+                text-shadow: 0 -1px 0 rgba(151, 99, 33, 0.43);
+            }
+
+                .main-menu > ul ul li a:hover {
+                    border-left: 4px solid #055988;
+                    background: url(/Content/images/menu/highlight-bg.png) repeat;
+                }
+
+                .main-menu > ul ul li a:active {
+                    background: url(/Content/images/menu/menu-bg.png) repeat;
+                }
+
+
+/* Vertical Menu */
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+.side-menu {
+    background: url(/Content/images/menu/hover.png) repeat;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    width: 200px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    padding-left: 3px;
+}
+
+    .side-menu ul,
+    .side-menu ul li,
+    .side-menu ul ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+        .side-menu ul a,
+        .side-menu ul a:link,
+        .side-menu ul a:visited {
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-weight: 300;
+        }
+
+    .side-menu > ul {
+        float: none;
+        background: url(/Content/images/menu/menu-bg.png) repeat;
+    }
+
+        .side-menu > ul > li.active > a,
+        .side-menu > ul > li > a:active {
+            background: url(/Content/images/menu/hover.png) repeat;
+        }
+
+        .side-menu > ul > li > a {
+            padding: 10px 20px;
+        }
+
+        .side-menu > ul > li:hover {
+            background: url(/Content/images/menu/highlight-bg.png) repeat;
+        }
+
+
+    /* Sub Menu */
+
+    .side-menu ul ul a:link,
+    .side-menu ul ul a:visited {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .side-menu ul ul {
+        width: 180px;
+        background: none;
+        border-left: 20px solid transparent;
+    }
+
+        .side-menu ul ul a {
+            padding: 8px 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .side-menu ul ul li {
+            padding: 0 20px;
+            background: #fff;
+        }
+
+            .side-menu ul ul li:last-child {
+                border-bottom: 3px solid #d7d8da;
+                padding-bottom: 10px;
+            }
+
+            .side-menu ul ul li:first-child {
+                padding-top: 10px;
+            }
+
+            .side-menu ul ul li:last-child > a {
+                border-bottom: none;
+            }
+
+            .side-menu ul ul li:first-child:after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 0;
+                position: absolute;
+                left: -20px;
+                top: 13px;
+                border-left: 10px solid transparent;
+                border-right: 10px solid #fff;
+                border-bottom: 10px solid transparent;
+                border-top: 10px solid transparent;
+            }

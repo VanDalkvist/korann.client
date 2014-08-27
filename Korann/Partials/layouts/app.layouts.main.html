@@ -1,0 +1,41 @@
+﻿<div class="wrapper">
+    <header class="header-menu" ng-controller="headerCtrl">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <a ui-sref="home"><img src="/Content/images/logo.gif" /></a>
+            </div>
+            <div class="main-menu">
+                <ul class="nav navbar-nav">
+                    <!-- todo: add configuration for pages -->
+                    <li ng-class="(isCurrent('home') && 'active') || ''" ng-click="onClick('home')"><a ui-sref="home"><span>Главная</span></a></li>
+                    <li ng-class="(isCurrent('kora') && 'active') || ''" ng-click="onClick('kora')"><a ui-sref="kora"><span>Кора</span></a></li>
+                    <li ng-class="(isCurrent('sante') && 'active') || ''" ng-click="onClick('sante')"><a ui-sref="kora"><span>Сантэ</span></a></li>
+                    <li ng-class="(isCurrent('about') && 'active') || ''" ng-click="onClick('about')"><a ui-sref="kora"><span>Контакты</span></a></li>
+                </ul>
+            </div>
+            <div class="title navbar-header">
+                <h3>В Нижнем Новгороде</h3>
+            </div>
+            <div class="right-img navbar-header">
+                <img src="/Content/images/flower_finish.gif">
+            </div>
+        </nav>
+    </header>
+    <div class="middle">
+        <div class="left">
+            <div ui-view="left" class="fixed">
+            </div>
+        </div>
+        <div class="main">
+            <div ui-view="current">
+            </div>
+        </div>
+        <div class="right">
+            <div ui-view="right">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div ui-view="footer"></div>
+    </div>
+</div>
