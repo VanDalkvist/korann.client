@@ -4,7 +4,7 @@ using Korann.Infrastructure.Contracts;
 
 namespace Korann.Controllers.API
 {
-    [RoutePrefix("products")]
+    [RoutePrefix("api/products")]
     public class ProductsController : ApiController
     {
         private readonly IProductService _productService;
@@ -31,7 +31,7 @@ namespace Korann.Controllers.API
         }
 
         // GET /api/products/filter?category={category}
-        [Route("/filter")]
+        [Route("filter")]
         [HttpGet]
         public IHttpActionResult GetFiltered([FromUri] string category)
         {

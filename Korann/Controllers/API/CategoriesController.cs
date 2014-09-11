@@ -4,7 +4,7 @@ using Korann.Infrastructure.Contracts;
 
 namespace Korann.Controllers.API
 {
-    [RoutePrefix("categories")]
+    [RoutePrefix("api/categories")]
     public class CategoriesController : ApiController
     {
         private readonly ICategoryService _categoryService;
