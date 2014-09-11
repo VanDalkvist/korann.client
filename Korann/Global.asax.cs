@@ -23,7 +23,7 @@ namespace Korann
             _log.Info("Korann.Client application started");
 
             _log.Info("Configuring WebApi: registering api routes.");
-            WebApiConfig.Register(GlobalConfiguration.Configuration);
+            GlobalConfiguration.Configure(WebApiConfig.Register);
 
             _log.Info("Configuring MVC/WebApi: registering exception loggers.");
             FilterConfig.RegisterLoggerFilters(GlobalFilters.Filters, GlobalConfiguration.Configuration);
