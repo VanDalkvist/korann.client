@@ -20,8 +20,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6B5929
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Back-end", "Back-end", "{53DA589A-CB0A-4AE7-9CE9-EDD8246426F8}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B9D69192-5D8F-4ABE-BA55-7FFA4931169C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Front-end", "Front-end", "{59FEC0AC-FDDF-4302-A9F6-775E27BEF3D4}"

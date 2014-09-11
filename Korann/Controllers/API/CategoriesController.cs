@@ -4,6 +4,7 @@ using Korann.Infrastructure.Contracts;
 
 namespace Korann.Controllers.API
 {
+    [RoutePrefix("categories")]
     public class CategoriesController : ApiController
     {
         private readonly ICategoryService _categoryService;
@@ -13,16 +14,18 @@ namespace Korann.Controllers.API
             _categoryService = categoryService;
         }
 
-        // /api/categories
+        // GET /api/categories
+        [Route]
         [HttpGet]
         public IHttpActionResult GetAll()
         {
             return Ok(_categoryService.GetAll());
         }
 
-        // /api/categories?id={id}
+        // GET /api/categories/{id}
+        [Route("{id}")]
         [HttpGet]
-        public IHttpActionResult GetEntity(string id)
+        public IHttpActionResult Get(string id)
         {
             return Ok(_categoryService.GetEntity(id));
         }

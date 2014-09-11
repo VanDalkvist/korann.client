@@ -41,7 +41,7 @@ namespace Korann.Tests.ApiControllers
         [TestMethod]
         public void GetCategoryTest()
         {
-            _controller.GetEntity(_id);
+            _controller.Get(_id);
             _categoryServiceMock.Verify(service => service.GetEntity(It.Is<string>(s => s == _id)), Times.Exactly(1));
         }
     }

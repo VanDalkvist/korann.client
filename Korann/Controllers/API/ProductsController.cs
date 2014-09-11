@@ -4,6 +4,7 @@ using Korann.Infrastructure.Contracts;
 
 namespace Korann.Controllers.API
 {
+    [RoutePrefix("products")]
     public class ProductsController : ApiController
     {
         private readonly IProductService _productService;
@@ -13,23 +14,26 @@ namespace Korann.Controllers.API
             _productService = productService;
         }
 
-        // /api/products/
+        // GET /api/products/
+        [Route]
         [HttpGet]
         public IHttpActionResult GetAll()
         {
             return Ok(_productService.GetAll());
         }
 
-        // /api/products?id={id}
+        // GET /api/products/{id}
+        [Route("{id}")]
         [HttpGet]
-        public IHttpActionResult GetEntity(string id)
+        public IHttpActionResult Get(string id)
         {
             return Ok(_productService.GetEntity(id));
         }
 
-        // /api/products?category={category}
+        // GET /api/products/filter?category={category}
+        [Route("/filter")]
         [HttpGet]
-        public IHttpActionResult GetByCategory(string category)
+        public IHttpActionResult GetFiltered([FromUri] string category)
         {
             return Ok(_productService.GetByCategory(category));
         }

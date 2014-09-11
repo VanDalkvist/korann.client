@@ -10,9 +10,9 @@ using Korann.Utils;
 
 namespace Korann.Configuration
 {
-    public static class IoCRegistrator
+    public static class AppContext
     {
-        public static void RegisterDependencies(this ContainerBuilder builder)
+        public static void RegisterDependencies(ContainerBuilder builder)
         {
             builder.Register(context => new LogInterceptor());
 

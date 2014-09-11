@@ -16,7 +16,7 @@ namespace Korann.Tests
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterDependencies();
+            AppContext.RegisterDependencies(builder);
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
             var container = builder.Build();

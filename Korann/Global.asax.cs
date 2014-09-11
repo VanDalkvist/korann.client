@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
@@ -7,43 +6,46 @@ using System.Web.Optimization;
 using System.Web.Routing;
 
 using Korann.App_Start;
+using Korann.Common;
 using Korann.Configuration;
 
 using log4net;
-using log4net.Config;
 
 namespace Korann
 {
-    // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
-    // visit http://go.microsoft.com/?LinkId=9394801
-    public class MvcApplication : HttpApplication
+    public class KorannClientApp : HttpApplication
     {
-        private static ILog log;
+        private readonly ILog _log = LogManager.GetLogger(typeof(KorannClientApp));
 
         protected void Application_Start()
         {
-            log = LogManager.GetLogger(typeof (MvcApplication));
+            log4net.Config.XmlConfigurator.Configure();
+            _log.Info("Korann.Client application started");
 
-            XmlConfigurator.Configure(new FileInfo("log4net.config"));
-            BasicConfigurator.Configure();
+            _log.Info("Configuring WebApi: registering api routes.");
+            WebApiConfig.Register(GlobalConfiguration.Configuration);
 
-            log.InfoFormat("Initialize application");
+            _log.Info("Configuring MVC/WebApi: registering exception loggers.");
+            FilterConfig.RegisterLoggerFilters(GlobalFilters.Filters, GlobalConfiguration.Configuration);
 
-            GlobalConfiguration.Configure(WebApiConfig.Register);
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            _log.Info("Configuring MVC: registering routes.");
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            _log.Info("Configuring MVC/WebApi: registering bundles.");
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            IoCConfig.RegisterDependencies();
+
+            _log.Info("Configuring MVC/WebApi: registering dto mappings.");
             DTOConfig.RegisterMappings();
+
+            _log.Info("Configuring MVC/WebApi: registering IoC containers.");
+            IoCConfig.RegisterDependencies(typeof(KorannClientApp).Assembly);
         }
 
         protected void Application_Error(object sender, EventArgs e)
         {
             var error = Server.GetLastError();
-            var httpContext = ((MvcApplication)sender).Context;
-            var url = httpContext.Request.Url;
-            
-            log.Error(string.Format("Error occurred during processing the request to: {0}", url), error);
+            var httpContext = ((KorannClientApp)sender).Context;
+            _log.RecursiveLogError(error, httpContext.Request.Url);
         }
     }
 }

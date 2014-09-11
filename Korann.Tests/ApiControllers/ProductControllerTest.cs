@@ -42,7 +42,7 @@ namespace Korann.Tests.ApiControllers
         [TestMethod]
         public void GetProductTest()
         {
-            _controller.GetEntity(_id);
+            _controller.Get(_id);
             _productServiceMock.Verify(service => service.GetEntity(It.Is<string>(s => s == _id)), Times.Exactly(1));
         }
     }
