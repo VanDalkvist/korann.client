@@ -5,14 +5,14 @@
 <head>
     <meta name="viewport" content="width=device-width" />
 
-    @Styles.Render("~/bundles/styles")
+    @Styles.Render("~/bundles/app/styles")
 </head>
 <body>
     <div data-ng-app="korann">
         @RenderBody()
         
-        @Scripts.Render("~/bundles/angular")
-        @Scripts.Render("~/bundles/app")
+        @Scripts.Render("~/bundles/app/vendors")
+        @Scripts.Render("~/bundles/app/scripts")
     </div>
 </body>
 </html>

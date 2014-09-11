@@ -143,42 +143,50 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="Content\images\bg.jpg" />
-    <Content Include="Content\images\blue-cog-md.png" />
-    <Content Include="Content\images\example.jpg" />
-    <Content Include="Content\images\flower_finish.gif" />
-    <Content Include="Content\images\logo.gif" />
-    <Content Include="Content\images\menu\highlight-bg.png" />
-    <Content Include="Content\images\menu\hover.png" />
-    <Content Include="Content\images\menu\menu-bg.png" />
-    <Content Include="Content\styles\construction.css" />
-    <Content Include="Content\styles\elements.css" />
-    <Content Include="Content\styles\kora.css" />
-    <Content Include="Content\styles\main.css" />
+    <Content Include="app\images\bg.jpg" />
+    <Content Include="app\images\blue-cog-md.png" />
+    <Content Include="app\images\example.jpg" />
+    <Content Include="app\images\flower_finish.gif" />
+    <Content Include="app\images\logo.gif" />
+    <Content Include="app\images\menu\highlight-bg.png" />
+    <Content Include="app\images\menu\hover.png" />
+    <Content Include="app\images\menu\menu-bg.png" />
+    <Content Include="app\styles\construction.css" />
+    <Content Include="app\styles\elements.css" />
+    <Content Include="app\styles\kora.css" />
+    <Content Include="app\styles\main.css" />
     <Content Include="Global.asax" />
-    <Content Include="Partials\layouts\app.layouts.main.html" />
-    <Content Include="Partials\layouts\app.layouts.construction.html" />
-    <Content Include="Partials\pages\app.pages.kora.html" />
-    <Content Include="Partials\panels\app.panels.footer.html" />
-    <Content Include="Partials\views\app.views.product.html" />
-    <Content Include="Partials\widgets\app.widgets.product.html" />
-    <Content Include="Partials\widgets\app.widgets.category.html" />
-    <Content Include="Partials\panels\app.panels.filter.html" />
-    <Content Include="Partials\panels\app.panels.advertising.html" />
-    <Content Include="Partials\panels\app.panels.categories.html" />
-    <Content Include="app\controllers\app.controllers.header.js" />
-    <Content Include="app\modules\settings\app.providers.settings.js" />
-    <Content Include="app\controllers\app.controllers.main.js" />
-    <Content Include="app\modules\api\app.providers.api.js" />
-    <Content Include="app\modules\internal\app.utils.js" />
-    <Content Include="app\views\app.views.product.js" />
-    <Content Include="app\controllers\app.controllers.categories.js" />
-    <Content Include="app\modules\app.modules.js" />
-    <Content Include="app\widgets\app.widgets.product.js" />
-    <Content Include="app\controllers\app.controllers.dashboard.js" />
-    <Content Include="app\controllers\app.controllers.kora.js" />
-    <Content Include="app\modules\internal\app.api-proxy.js" />
-    <Content Include="app\services\app.services.about.js" />
+    <Content Include="app\views\layouts-examples\2-column.html" />
+    <Content Include="app\views\layouts-examples\3-column.html" />
+    <Content Include="app\views\layouts-examples\about.html" />
+    <Content Include="app\views\layouts-examples\full.html" />
+    <Content Include="app\views\layouts-examples\index.html" />
+    <Content Include="app\views\layouts-examples\page.html" />
+    <Content Include="app\views\layouts-examples\portfolio.html" />
+    <Content Include="app\views\layouts-examples\services.html" />
+    <Content Include="app\views\layouts\app.layouts.main.html" />
+    <Content Include="app\views\layouts\app.layouts.construction.html" />
+    <Content Include="app\views\pages\app.pages.kora.html" />
+    <Content Include="app\views\panels\app.panels.footer.html" />
+    <Content Include="app\views\views\app.views.product.html" />
+    <Content Include="app\views\widgets\app.widgets.product.html" />
+    <Content Include="app\views\widgets\app.widgets.category.html" />
+    <Content Include="app\views\panels\app.panels.filter.html" />
+    <Content Include="app\views\panels\app.panels.advertising.html" />
+    <Content Include="app\views\panels\app.panels.categories.html" />
+    <Content Include="app\scripts\controllers\app.controllers.header.js" />
+    <Content Include="app\scripts\modules\settings\app.providers.settings.js" />
+    <Content Include="app\scripts\controllers\app.controllers.main.js" />
+    <Content Include="app\scripts\modules\api\app.providers.api.js" />
+    <Content Include="app\scripts\modules\internal\app.utils.js" />
+    <Content Include="app\scripts\views\app.views.product.js" />
+    <Content Include="app\scripts\controllers\app.controllers.categories.js" />
+    <Content Include="app\scripts\modules\app.modules.js" />
+    <Content Include="app\scripts\widgets\app.widgets.product.js" />
+    <Content Include="app\scripts\controllers\app.controllers.dashboard.js" />
+    <Content Include="app\scripts\controllers\app.controllers.kora.js" />
+    <Content Include="app\scripts\modules\internal\app.api-proxy.js" />
+    <Content Include="app\scripts\services\app.services.about.js" />
     <Content Include="appSettings.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -190,17 +198,16 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include=".bin\bower.cmd" />
-    <None Include=".bin\git.cmd" />
     <Content Include=".bowerrc" />
     <Content Include="bower.json" />
-    <None Include=".bin\node.cmd" />
+    <Content Include=".bin\bower.cmd" />
+    <Content Include=".bin\git.cmd" />
+    <Content Include=".bin\node.cmd" />
     <None Include="Properties\PublishProfiles\Korann.pubxml" />
-    <Content Include="app\widgets\app.widgets.category.js" />
-    <Content Include="app\main.js" />
-    <Content Include="Partials\pages\app.pages.dashboard.html" />
-    <Content Include="Partials\pages\app.pages.about.html" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="app\scripts\widgets\app.widgets.category.js" />
+    <Content Include="app\scripts\main.js" />
+    <Content Include="app\views\pages\app.pages.dashboard.html" />
+    <Content Include="app\views\pages\app.pages.about.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -218,7 +225,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="vendors\" />
+    <Folder Include="app\vendors\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -268,7 +275,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
@@ -276,7 +283,9 @@
   </Target> -->
   <Target Name="BeforeBuild">
     <Message Text="$(ProjectName) -&gt; started bower install" Importance="high" />
-    <Exec Command="&quot;.bin\bower&quot; install" />
+    <Exec Command=".bin\bower install" ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfExec" />
+    </Exec>
     <Message Text="$(ProjectName) -&gt; done bower install" Importance="high" />
   </Target>
 </Project>

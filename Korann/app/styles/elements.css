@@ -4,7 +4,7 @@
 
 .main-menu,
 .main-menu > ul {
-    background: url(/Content/images/menu/hover.png) repeat;
+    background: url(/app/images/menu/hover.png) repeat;
     padding-bottom: 3px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
@@ -38,7 +38,7 @@
     }
 
     .main-menu > ul {
-        background: url(/Content/images/menu/menu-bg.png) repeat;
+        background: url(/app/images/menu/menu-bg.png) repeat;
         margin: 0;
         padding: 0;
         position: relative;
@@ -69,7 +69,7 @@
             }
 
             .main-menu > ul > li:hover > a {
-                background: url(/Content/images/menu/hover.png) repeat;
+                background: url(/app/images/menu/hover.png) repeat;
             }
 
             .main-menu > ul > li > a > span {
@@ -78,7 +78,7 @@
 
         .main-menu > ul.navbar-nav > li.active > a,
         .main-menu > ul.navbar-nav > li > a:active {
-            background: url(/Content/images/menu/highlight-bg.png) repeat !important;
+            background: url(/app/images/menu/highlight-bg.png) repeat !important;
         }
 
         /* Childs */
@@ -88,7 +88,7 @@
             visibility: hidden;
             position: absolute;
             top: 120px;
-            background: url(/Content/images/menu/hover.png) repeat;
+            background: url(/app/images/menu/hover.png) repeat;
             margin: 0;
             padding: 0;
             z-index: -1;
@@ -147,11 +147,11 @@
 
                 .main-menu > ul ul li a:hover {
                     border-left: 4px solid #055988;
-                    background: url(/Content/images/menu/highlight-bg.png) repeat;
+                    background: url(/app/images/menu/highlight-bg.png) repeat;
                 }
 
                 .main-menu > ul ul li a:active {
-                    background: url(/Content/images/menu/menu-bg.png) repeat;
+                    background: url(/app/images/menu/menu-bg.png) repeat;
                 }
 
 
@@ -160,7 +160,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
 .side-menu {
-    background: url(/Content/images/menu/hover.png) repeat;
+    background: url(/app/images/menu/hover.png) repeat;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
     width: 200px;
@@ -191,12 +191,12 @@
 
     .side-menu > ul {
         float: none;
-        background: url(/Content/images/menu/menu-bg.png) repeat;
+        background: url(/app/images/menu/menu-bg.png) repeat;
     }
 
         .side-menu > ul > li.active > a,
         .side-menu > ul > li > a:active {
-            background: url(/Content/images/menu/hover.png) repeat;
+            background: url(/app/images/menu/hover.png) repeat;
         }
 
         .side-menu > ul > li > a {
@@ -204,7 +204,7 @@
         }
 
         .side-menu > ul > li:hover {
-            background: url(/Content/images/menu/highlight-bg.png) repeat;
+            background: url(/app/images/menu/highlight-bg.png) repeat;
         }
 
 

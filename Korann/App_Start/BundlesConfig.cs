@@ -13,34 +13,32 @@ namespace Korann.App_Start
 
         private static void RegisterScriptBundles(BundleCollection bundles)
         {
-            // register vendors
+            bundles.Add(
+                new ScriptBundle("~/bundles/app/vendors")
+                    .Include(
+                        "~/app/vendors/angular/angular.js",
+                        "~/app/vendors/angular-resource/angular-resource.js",
+                        "~/app/vendors/angular-bootstrap/ui-bootstrap-tpls.js",
+                        "~/app/vendors/angular-ui-router/release/angular-ui-router.js",
+                        "~/app/vendors/lodash/dist/lodash.js",
+                        "~/app/vendors/checklist-model/checklist-model.js",
+                        "~/app/vendors/ng-file-upload/angular-file-upload.js"));
 
             bundles.Add(
-                new ScriptBundle("~/bundles/angular")
-                    .Include(
-                        "~/vendors/angular/angular.js",
-                        "~/vendors/angular-resource/angular-resource.js",
-                        "~/vendors/angular-bootstrap/ui-bootstrap-tpls.js",
-                        "~/vendors/angular-ui-router/release/angular-ui-router.js",
-                        "~/vendors/lodash/dist/lodash.js",
-                        "~/vendors/checklist-model/checklist-model.js",
-                        "~/vendors/ng-file-upload/angular-file-upload.js"));
-
-            // register application scripts
-
-            bundles.Add(new ScriptBundle("~/bundles/app")
-                .Include("~/app/main.js")
-                .IncludeDirectory("~/app/", "*.js", searchSubdirectories: true));
+                new ScriptBundle("~/bundles/app/scripts")
+                    .Include("~/app/scripts/main.js")
+                    .IncludeDirectory("~/app/scripts/", "*.js", searchSubdirectories: true));
         }
 
         private static void RegisterStyleBundles(BundleCollection bundles)
         {
-            bundles.Add(new StyleBundle("~/bundles/styles").IncludeDirectory(
-                "~/Content/styles/", "*.css", searchSubdirectories: true));
+            bundles.Add(
+                new StyleBundle("~/bundles/app/styles")
+                    .IncludeDirectory("~/app/styles/", "*.css", searchSubdirectories: true));
 
             // todo: style from vendors
-//            bundles.Add(new StyleBundle("~/bundles/bootstrap-styles").IncludeDirectory(
-//                "~/Content/bootstrap", "*.css", searchSubdirectories: true));
+            //            bundles.Add(new StyleBundle("~/bundles/bootstrap-styles").IncludeDirectory(
+            //                "~/Content/bootstrap", "*.css", searchSubdirectories: true));
         }
     }
 }

@@ -39,6 +39,6 @@ ul.kora li {
     -ms-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     
-    /*background: url(/Content/images/menu/highlight-bg.png) repeat;*/
+    /*background: url(/app/images/menu/highlight-bg.png) repeat;*/
     /*padding: 4px;*/
 }

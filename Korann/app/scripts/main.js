@@ -40,7 +40,7 @@
 
         $stateProvider.state("main", {
             url: "/",
-            templateUrl: "Partials/layouts/app.layouts.construction.html"
+            templateUrl: "app/views/layouts/app.layouts.construction.html"
         });
     }
 
@@ -59,7 +59,7 @@
         $stateProvider.state("main", {
             url: "^",
             abstract: true,
-            templateUrl: "Partials/layouts/app.layouts.main.html"
+            templateUrl: "app/views/layouts/app.layouts.main.html"
         });
 
         $stateProvider.state("home", {
@@ -101,7 +101,7 @@
         return function (viewName, suffix) {
             return {
                 controller: viewName + (suffix || '') + "Ctrl",
-                templateUrl: "Partials/" + type + "/app." + type + "." + viewName + ".html"
+                templateUrl: "app/views/" + type + "/app." + type + "." + viewName + ".html"
             };
         };
     }
