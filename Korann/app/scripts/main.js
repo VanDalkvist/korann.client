@@ -21,7 +21,7 @@
             settingsProvider.config(options.Construction, _configConstructionMode);
             settingsProvider.config(options.Production, _configDeployMode);
 
-            settingsProvider.mode(options.Construction)($stateProvider, $urlRouterProvider);
+            settingsProvider.mode(options.Production)($stateProvider, $urlRouterProvider);
         }]);
 
     app.config(['apiProvider',

@@ -32,13 +32,12 @@ namespace Korann.App_Start
 
         private static void RegisterStyleBundles(BundleCollection bundles)
         {
+            bundles.Add(new StyleBundle("~/bundles/bootstrap").IncludeDirectory(
+                "~/app/vendors/bootstrap/dist/css/bootstrap.css", "*.css", searchSubdirectories: true));
+
             bundles.Add(
                 new StyleBundle("~/bundles/app/styles")
                     .IncludeDirectory("~/app/styles/", "*.css", searchSubdirectories: true));
-
-            // todo: style from vendors
-            //            bundles.Add(new StyleBundle("~/bundles/bootstrap-styles").IncludeDirectory(
-            //                "~/Content/bootstrap", "*.css", searchSubdirectories: true));
         }
     }
 }
