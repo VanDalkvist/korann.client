@@ -123,3 +123,4 @@ GoToList.Web.User/App_Data/
 GoToList.Web.User/shared/
 
 *.pubxml.user
+.idea/*
