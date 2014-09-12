@@ -12,24 +12,21 @@ using Korann.Configuration;
 
 namespace Korann.App_Start
 {
-    public class IoCConfig
+    public static class IoCConfig
     {
-        public static void RegisterDependencies(IEnumerable<Assembly> assemblies)
+        public static ContainerBuilder RegisterDependencies(IEnumerable<Assembly> assemblies)
         {
             var builder = new ContainerBuilder();
 
             AppContext.RegisterDependencies(builder);
-
             RegisterControllers(assemblies, builder);
 
-            var container = builder.Build();
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
-            GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver(container);
+            return builder;
         }
 
-        public static void RegisterDependencies(Assembly assembly)
+        public static ContainerBuilder RegisterDependencies(Assembly assembly)
         {
-            RegisterDependencies(new[] { assembly });
+            return RegisterDependencies(new[] { assembly });
         }
 
         private static void RegisterControllers(IEnumerable<Assembly> assemblies, ContainerBuilder builder)
@@ -37,6 +34,13 @@ namespace Korann.App_Start
             var controllerAssemblies = assemblies.ToArray();
             builder.RegisterControllers(controllerAssemblies).PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
             builder.RegisterApiControllers(controllerAssemblies).PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
+        }
+
+        public static void RegisterResolvers(this ContainerBuilder builder, HttpConfiguration configuration)
+        {
+            var container = builder.Build();
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+            configuration.DependencyResolver = new AutofacWebApiDependencyResolver(container);
         }
     }
 }

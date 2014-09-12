@@ -2,6 +2,7 @@
 
 using Korann.DAL.Contracts;
 using Korann.DAL.DTO;
+using Korann.Infrastructure;
 using Korann.Infrastructure.Contracts;
 using Korann.Infrastructure.Services;
 
@@ -27,7 +28,7 @@ namespace Korann.Tests.Services
         public void Init()
         {
             _productRepositoryMock = new Mock<IProductRepository>();
-
+            
             _product1Id = Guid.NewGuid().ToString();
             _product2Id = Guid.NewGuid().ToString();
 
@@ -37,7 +38,7 @@ namespace Korann.Tests.Services
             _productRepositoryMock.Setup(repository => repository.GetAll()).Returns(new[] { _product1, _product2 });
             _productRepositoryMock.Setup(repository => repository.GetOne(_product1Id)).Returns(_product1);
 
-            _service = new ProductService(_productRepositoryMock.Object);
+            _service = new ProductService(ApiClientMock.Object);
         }
 
         [TestMethod]

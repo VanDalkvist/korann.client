@@ -34,11 +34,16 @@ namespace Korann
             _log.Info("Configuring MVC/WebApi: registering bundles.");
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            _log.Info("Configuring MVC/WebApi: registering dto mappings.");
+            _log.Info("Configuring dto mappings.");
             DTOConfig.RegisterMappings();
 
-            _log.Info("Configuring MVC/WebApi: registering IoC containers.");
-            IoCConfig.RegisterDependencies(typeof(KorannClientApp).Assembly);
+            _log.Info("Configuring IoC containers.");
+            var builder = IoCConfig.RegisterDependencies(typeof(KorannClientApp).Assembly);
+
+            _log.Info("Configuring Rest clients.");
+            ApiConfig.RegisterRestClients(builder);
+
+            builder.RegisterResolvers(GlobalConfiguration.Configuration);
         }
 
         protected void Application_Error(object sender, EventArgs e)

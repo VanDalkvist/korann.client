@@ -13,22 +13,24 @@ namespace Korann.Infrastructure.Services
         where TEntityModel : class, IEntityModel, new()
         where TEntity : class, IEntity, new()
     {
-        protected readonly IRepository<TEntity> EntityRepository;
+        protected readonly IApiClient _apiClient;
 
-        protected EntityService(IRepository<TEntity> entityRepository)
+        protected virtual string Resource { get; private set; }
+
+        protected EntityService(IApiClient apiClient)
         {
-            EntityRepository = entityRepository;
+            _apiClient = apiClient;
         }
 
         public TEntityModel GetEntity(string id)
         {
-            var entity = EntityRepository.GetOne(id);
-            return Mapper.Map<TEntityModel>(entity);
+            var response = _apiClient.Get<TEntity>(Resource + "/" + id);
+            return Mapper.Map<TEntityModel>(response);
         }
 
         public IEnumerable<TEntityModel> GetAll()
         {
-            var entities = EntityRepository.GetAll();
+            var entities = _apiClient.Get<List<TEntity>>(Resource);
             return entities.SelectOrDefault(Mapper.Map<TEntityModel>);
         }
     }

@@ -37,7 +37,7 @@ namespace Korann.Tests.Services
             _categoryRepositoryMock.Setup(repository => repository.GetAll()).Returns(new[] { _category1, _category2 });
             _categoryRepositoryMock.Setup(repository => repository.GetOne(_category1Id)).Returns(_category1);
 
-            _categoryService = new CategoryService(_categoryRepositoryMock.Object);
+            _categoryService = new CategoryService(ApiClientMock.Object);
         }
 
         [TestMethod]

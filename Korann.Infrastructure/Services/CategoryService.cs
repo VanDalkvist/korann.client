@@ -7,9 +7,6 @@ namespace Korann.Infrastructure.Services
 {
     public class CategoryService : EntityService<Category, CategoryModel>, ICategoryService
     {
-        public CategoryService(ICategoryRepository entityRepository)
-            : base(entityRepository)
-        {
-        }
+        public CategoryService(IApiClient apiClient) : base(apiClient) { }
     }
 }
